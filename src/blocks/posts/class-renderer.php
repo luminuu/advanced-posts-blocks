@@ -62,7 +62,7 @@ class Renderer extends \Advanced_Posts_Blocks\Blocks\Renderer {
 							'relation' => array(
 								'type'     => 'string',
 								'required' => false,
-								'default'  => 'AND',
+								'default'  => 'OR',
 							),
 						),
 					),
