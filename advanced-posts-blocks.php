@@ -7,7 +7,8 @@
  * Author URI:      https://torounit.com
  * Text Domain:     advanced-posts-blocks
  * Domain Path:     /languages
- * Version: 3.0.2
+ * Version: 		3.0.2
+ * Update URI:		https://github.com/luminuu/advanced-posts-blocks
  *
  * @package         Advanced_Posts_Blocks
  */
