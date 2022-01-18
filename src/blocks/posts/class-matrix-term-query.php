@@ -84,12 +84,12 @@ class Matrix_Term_Query {
 							)
 						);
 					}
-					$new_tax_sub_query['relation'] = 'AND';
+					$new_tax_sub_query['relation'] = 'OR';
 
 					$new_tax_query[] = $new_tax_sub_query;
 				}
 			}
-			$new_tax_query['relation'] = 'AND';
+			$new_tax_query['relation'] = 'OR';
 			$query->set( 'tax_query', $new_tax_query );
 			$query->set( $this->query_var, false );
 			$query->tax_query = new WP_Tax_Query( $new_tax_query );
