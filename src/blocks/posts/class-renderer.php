@@ -128,7 +128,7 @@ class Renderer extends \Advanced_Posts_Blocks\Blocks\Renderer {
 			if ( ! isset( $attributes[ $base ]['terms'] ) && is_array( $attributes[ $base ] ) ) {
 				$attributes[ $base ] = array(
 					'terms'    => $attributes[ $base ],
-					'relation' => 'AND',
+					'relation' => 'OR',
 				);
 			}
 
@@ -145,13 +145,13 @@ class Renderer extends \Advanced_Posts_Blocks\Blocks\Renderer {
 						),
 					);
 				}
-				$query['relation'] = 'AND';
+				$query['relation'] = 'OR';
 
 				$args['tax_query'][] = $query;
 			}
 		}
 
-		$args['tax_query']['relation'] = 'AND';
+		$args['tax_query']['relation'] = 'OR';
 
 		$this->setup_query( $args );
 		$output = $this->get_content_from_template( $attributes );
